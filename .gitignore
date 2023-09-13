@@ -1,0 +1,36 @@
+# Directorios y archivos generados por Python y Django
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+
+# Directorio de entorno virtual 
+venv/
+
+
+# Archivos de registros y caché
+logs/
+__logs/
+*.log
+*.swp
+*.swo
+*.cache
+
+
+# Archivo de configuración de IDE
+.idea/
+
+
+# Archivo de configuración de editor de texto
+.vscode/
+
+
+# Archivos de compilación y paquetes
+*.pyc
+*.pyo
+__pycache__/
+*.egg-info/
+dist/
+build/
