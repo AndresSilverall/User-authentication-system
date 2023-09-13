@@ -5,6 +5,11 @@ from django.contrib.auth.forms import UserCreationForm #Me trae los campos Usern
 
 
 # Create your views here.
+def home(request):
+    return render(request, "home.html")
+
+
+
 def index(request):
 
     form = CreateNewUser()
