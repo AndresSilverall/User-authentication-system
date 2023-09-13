@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from Authenticate.forms import CreateNewUser
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm #Me trae los campos Username, password, repeat password
 
 
 # Create your views here.
