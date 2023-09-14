@@ -40,19 +40,19 @@
                 <br>
                 <button type="submit" class="btn btn-primary btn-block mx-5">Register</button>
                 {% if messages %}
-                {% for message in messages %}
-                <div class="alert alert-succes"> 
-                    <h3>{{message}}</h3>
-                </div>
+                    {% for message in messages %}
+                        <div class="alert alert-succes"> 
+                            <h3>{{message}}</h3>
+                        </div>
                 {% endfor %}
                 {% endif %}
-
-                {% if form.erros %}
+                
+                
+                {% if form.password.errors %}
                 <div class="alert alert-danger">
-                    <h3>Please write the correct fields</h3>
-                </div>
-                {% endif %}
-            </div>
+                  <h3>Error,please</h3>
+                 </div>
+                 {% endif %}
             </div>
         </form>
     </div>
