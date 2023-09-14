@@ -22,10 +22,10 @@ def register_user(request):
     if request.method == "POST":
         form = CreateNewUser(request.POST)
         if form.is_valid():
-            if form.cleaned_data["password1"] == form.cleaned_data["password2"]:
-                username = form.cleaned_data["username"]
-                form.save()
-                messages.success(request, f"User {username} created Succesfully!")
+            username = form.cleaned_data["username"]
+            form.save()
+            messages.success(request, f"User {username} created Succesfully!")
+
         else:
             form = CreateNewUser()
         
