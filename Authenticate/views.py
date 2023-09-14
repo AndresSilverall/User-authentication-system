@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from Authenticate.forms import CreateNewUser
+from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm #Me trae los campos Username, password, repeat password
 
@@ -20,6 +21,8 @@ def register_user(request):
     if request.method == "POST":
         form = CreateNewUser(request.POST)
         if form.is_valid():
+            username = form.cleaned_data["username"]
             form.save()
+            messages.success(request, f"User {username} created Succesfully!")
         
     return render(request, "index.html", {"form":form})

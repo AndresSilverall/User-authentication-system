@@ -24,21 +24,34 @@
                     <label for="username"><i class="fa-solid fa-user fa-lg"></i></label>
                 {{ form.username }}
                 </div>
-                <i class="fa-regular fa-envelope fa-lg"></i>
+                <label for="email"><i class="fa-regular fa-envelope fa-lg"></i></label>
                 <div class="form-group col-md-8 mx-5">
                     {{ form.email }}  
                 </div>
             </div>
-                <i class="fa-solid fa-lock fa-lg"></i>
+                <label for="password"><i class="fa-solid fa-lock fa-lg"></i></label>
                 <div class="form-group col-md-8 mx-5">    
                     {{ form.password1 }}
                 </div>
-                <i class="fa-solid fa-lock fa-lg"></i>
+                <label for="password2"><i class="fa-solid fa-lock fa-lg"></i></label>
                 <div class="form-group col-md-8 mx-5">
                     {{ form.password2 }}
                 </div>
                 <br>
                 <button type="submit" class="btn btn-primary btn-block mx-5">Register</button>
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-succes"> 
+                    <h3>{{message}}</h3>
+                </div>
+                {% endfor %}
+                {% endif %}
+
+                {% if form.erros %}
+                <div class="alert alert-danger">
+                    <h3>Please write the correct fields</h3>
+                </div>
+                {% endif %}
             </div>
             </div>
         </form>
