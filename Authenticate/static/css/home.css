@@ -8,6 +8,6 @@ body {
     background-color: blueviolet;
 }
 
-.navbar {
-    margin: 30px;
+li a {
+    margin-left: 30px;
 }

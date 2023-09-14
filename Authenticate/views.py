@@ -9,8 +9,11 @@ def home(request):
     return render(request, "home.html")
 
 
+def login_user(request):
+    return render(request, "login.html")
 
-def index(request):
+
+def register_user(request):
 
     form = CreateNewUser()
 

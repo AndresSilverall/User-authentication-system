@@ -1,16 +1,50 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'icons/fontawesome/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'icons/fontawesome/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'icons/fontawesome/css/solid.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
     <title>Register User</title>
 </head>
 <body>
-    <h3><center>Regiser user</center></h3>
-    <form method="POST">
-        {{form.as_p}}
-        {% csrf_token %}
-        <button type="submit"> Register user</button>
-    </form>
+    <div class="text-center">
+        <h3> Register user</h3>
+    </div>
+<form action="" method="POST">
+    <div class="container">
+        <div class="form-group">
+                <div class="form-group col-md-3">
+                <label for=""></label>
+
+                {{ form.username }}
+                </div>
+                <br>
+                <div class="form-group col-md-3">
+                    {{ form.email }}
+                </div>
+                <br>
+            </div>
+                <div class="form-group col-md-3">
+                    {{ form.password1 }}
+                </div>
+                <br>
+                <div class="col-md-3">
+                    {{ form.password2 }}
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </div>
+        </div>
+    </div>
+</form>
+    
+
+
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.js' %}"></script>
 </body>
 </html>
