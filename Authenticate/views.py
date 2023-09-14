@@ -11,12 +11,7 @@ def home(request):
     return render(request, "home.html")
 
 
-def login_user(request):
-    return render(request, "login.html")
-
-
 def register_user(request):
-
     form = CreateNewUser()
 
     if request.method == "POST":
@@ -24,9 +19,18 @@ def register_user(request):
         if form.is_valid():
             username = form.cleaned_data["username"]
             form.save()
-            messages.success(request, f"User {username} created Succesfully!")
-
-        else:
-            form = CreateNewUser()
+            messages.success(request, f"User '{username}' created Successfully!")
         
     return render(request, "index.html", {"form":form})
+
+
+def login_user(request):
+    return render(request, "login.html")
+
+
+def logout_user(request):
+    pass
+
+
+def restart_password(request):
+    pass

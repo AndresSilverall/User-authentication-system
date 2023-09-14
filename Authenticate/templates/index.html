@@ -22,7 +22,7 @@
             <div class="form-group">
                 <label for="username"><i class="fa-solid fa-user fa-lg"></i></label>
                 <div class="form-group col-md-8 mx-5">
-                {{ form.username }}
+                    {{ form.username }}
                 </div>
                 <label for="email"><i class="fa-regular fa-envelope fa-lg"></i></label>
                 <div class="form-group col-md-8 mx-5">
@@ -38,7 +38,8 @@
                     {{ form.password2 }}
                 </div>
                 <br>
-                <button type="submit" class="btn btn-primary btn-block mx-5">Register</button>
+                <button type="submit" class="btn btn-primary btn-block mx-5 btn-sm">Register</button>
+                <a class="fs-1" href="{% url 'login' %}">already have an account?</a>
                 <br>
                 <br>
                 {% if messages %}
@@ -48,8 +49,15 @@
                     </div>
                 {% endfor %}
                 {% endif %}
+
+                {% if form.errors %}
+                <div class="alert alert-danger">
+                    {{form.errors}}
+                </div>
+                {% endif %}
             </div>
         </form>
+
     </div>
 </form>
     
