@@ -3,23 +3,32 @@
     margin: 0;
 }
 
+
 .container {
+    border-radius: 20px;
     padding-top: 20px;
     padding-bottom: 50px;
-
-}
-
-.container {
-    background-color: aquamarine;
-}
-
-.container {
-    border-radius: 10px;
- 
 }
 
 
 body {
     background-color: blueviolet;
+}
+
+
+.container {
+    background-color:whitesmoke;
+    max-width: 360px;
+}
+
+
+.text-center {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+i {
+    margin-left: 10px;
+    display:inline;
 }
 
