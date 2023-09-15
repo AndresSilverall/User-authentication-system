@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from Authenticate.forms import CreateNewUser
+from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.hashers import make_password
 from django.contrib import messages
 from django.contrib.auth.models import User
@@ -20,12 +21,29 @@ def register_user(request):
             username = form.cleaned_data["username"]
             form.save()
             messages.success(request, f"User '{username}' created Successfully!")
-        
-    return render(request, "index.html", {"form":form})
+
+    context = {
+        "form": form
+    } 
+
+    return render(request, "register.html", context)
 
 
 def login_user(request):
-    return render(request, "login.html")
+    if request.method == "POST":
+        form = CreateNewUser(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+        username = form.cleaned_data["username"]
+        password = form.cleaned_data["username"]
+        
+        user = authenticate(request, )
+    context = {
+        "form": form
+    }
+    
+    return render(request, "login.html", context)
 
 
 def logout_user(request):
