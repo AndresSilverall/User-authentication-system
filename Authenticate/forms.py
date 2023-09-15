@@ -15,7 +15,7 @@ class CreateNewUser(UserCreationForm):
 
         #Personalizar mensajes del form
         self.fields["username"].error_messages.update({
-            "required": "mmm alhjajaja" 
+            "required": "The username already exists" 
         })
 
         #agregar un atributo a cada input

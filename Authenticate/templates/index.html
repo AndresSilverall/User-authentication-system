@@ -12,16 +12,17 @@
     <title>Register User</title>
 </head>
 <body>
+
     <div class="text-center">
-        <h3> Register user</h3>
+        <h1 class="main-text">Register user</h1>
     </div>
 
     <div class="container">
-        <form action="" method="POST">
+        <form action="{% url 'register' %}" method="POST">
             {% csrf_token %}
             <div class="form-group">
                 <label for="username"><i class="fa-solid fa-user fa-lg"></i></label>
-                <div class="form-group col-md-8 mx-5">
+                <div class="form-group col-md-8 mx-5 ">
                     {{ form.username }}
                 </div>
                 <label for="email"><i class="fa-regular fa-envelope fa-lg"></i></label>
@@ -30,17 +31,18 @@
                 </div>
             </div>
                 <label for="password"><i class="fa-solid fa-lock fa-lg"></i></label>
-                <div class="form-group col-md-8 mx-5">    
-                    {{ form.password1 }}
-                </div>
-                <label for="password2"><i class="fa-solid fa-lock fa-lg"></i></label>
+                    <div class="form-group col-md-8 mx-5">    
+                        {{ form.password1 }}
+                    </div>
+                    <label for="password2"><i class="fa-solid fa-lock fa-lg"></i></label>
                 <div class="form-group col-md-8 mx-5">
                     {{ form.password2 }}
+                    <br>
+                    <button type="submit" class="btn btn-primary btn-block mx-5 btn-sm ">Register</button>
+                    <br>
+                    <br>
+                    <a href="{% url 'login' %}">Already have an account?</a>
                 </div>
-                <br>
-                <button type="submit" class="btn btn-primary btn-block mx-5 btn-sm">Register</button>
-                <a class="fs-1" href="{% url 'login' %}">already have an account?</a>
-                <br>
                 <br>
                 {% if messages %}
                 {% for message in messages %}
@@ -57,12 +59,8 @@
                 {% endif %}
             </div>
         </form>
-
     </div>
-</form>
     
-
-
     <script src="{% static 'bootstrap/js/bootstrap.bundle.js' %}"></script>
 </body>
 </html>

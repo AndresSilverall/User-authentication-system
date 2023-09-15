@@ -4,6 +4,11 @@
 }
 
 
+form {
+    padding-top: 100px;
+}
+
+
 .container {
     border-radius: 12px;
     padding-top: 20px;
@@ -22,18 +27,32 @@ body {
     background: #757F9A;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    max-width: 360px;
+    max-width: 10px;
 }
 
 
 .form-group {
     max-height: 400px;
-    height: 400px;
 
 }
 
 .text-center {
     padding-top: 30px;
     padding-bottom: 40px;
+}
+
+button {
+    text-align: center;
+    justify-content: center;
+}
+
+
+a {
+    text-align: center;
+}
+
+h1 {
+    color: red;
+    font-family:Georgia, 'Times New Roman', Times, serif
 }
 
