@@ -1,0 +1,12 @@
+{% extends "navbar.html" %}
+
+
+{% block content %}
+{% if user.is_authenticated %}
+<ul class="dropdown-menu">
+<li><a class="dropdown-item">{{request.user}}</a></li>
+<li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+</ul>
+{% endif %}
+
+{% endblock %}

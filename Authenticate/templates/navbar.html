@@ -36,11 +36,15 @@
 							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 								<i class="fa-solid fa-circle-user fa-xl"></i>
 							</a>
+							{% block content %}
+							{% endblock %}
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="{% url 'login' %}">Login</a></li>
 								<li><a class="dropdown-item" href="{% url 'register' %}">Register</a></li>
 							</ul>
-						</li>			
+							
+						</li>
+										
 					</ul>
 				</div>
 			</div>
