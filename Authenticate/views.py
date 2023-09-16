@@ -57,8 +57,8 @@ def logout_user(request):
     return render(request, "navbar.html")
 
 
-def restart_password(request):
-    pass
+def reset_password(request):
+    return render(request, "reset_password.html")
 
 
 #view protected: login required
