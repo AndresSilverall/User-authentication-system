@@ -57,7 +57,17 @@ def logout_user(request):
     return render(request, "navbar.html")
 
 
-def reset_password(request):
+def change_password(request):
+    if request.method == "POST":
+        password_one = request.POST.get("password1")
+        password_two = request.POST.get("password2")
+        get_password = CreateNewUser()
+        get_password.cleaned_data["password1"] = password_one
+        get_password.cleaned_data["password2"] = password_two
+        get_password.save()
+
+        messages.success(request, "Password changed")
+
     return render(request, "reset_password.html")
 
 

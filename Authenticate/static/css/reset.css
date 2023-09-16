@@ -32,7 +32,7 @@ body {
 
 
 .form-group {
-    max-height: 400px;
+    max-height: 300px;
 
 }
 
@@ -46,10 +46,6 @@ button {
     justify-content: center;
 }
 
-
-a {
-    text-align: center;
-}
 
 
 h1 {
