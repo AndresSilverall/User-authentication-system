@@ -1,10 +1,9 @@
 from django.shortcuts import render, redirect
 from Authenticate.forms import CreateNewUser
 from django.contrib.auth import login, logout, authenticate
-from django.contrib.auth.hashers import make_password
 from django.contrib import messages
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm #Me trae los campos Username, password, repeat password
+from django.contrib.auth.forms import UserCreationForm 
 
 
 # Create your views here.
@@ -43,10 +42,13 @@ def login_user(request):
         if user is not None:
             login(request, user)
             return redirect("logged")
+        else:
+            messages.error(request, "Username or password incorrect!")
         
     context = {
         "form": form
     }
+
     return render(request, "login.html", context)
 
 
@@ -56,4 +58,9 @@ def logout_user(request):
 
 
 def restart_password(request):
+    pass
+
+
+#view protected: login required
+def products(request):
     pass
