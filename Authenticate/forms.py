@@ -1,4 +1,4 @@
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm
 from django.contrib.auth.models import User
 from django import forms
 
@@ -43,4 +43,10 @@ class CreateNewUser(UserCreationForm):
             "id": "password2"
             })
 
-    
+
+#reset password
+class ResetPassword(PasswordChangeForm):
+    class Meta:
+        model = PasswordChangeForm
+        fields = ["new_password2"]
+        

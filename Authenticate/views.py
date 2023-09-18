@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
-from Authenticate.forms import CreateNewUser
+from Authenticate.forms import CreateNewUser, ResetPassword
 from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm 
+from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib.auth import update_session_auth_hash #keep it the user session active
 
 
 # Create your views here.
@@ -57,18 +59,26 @@ def logout_user(request):
     return render(request, "navbar.html")
 
 
+@login_required
+def my_profile(request):
+    return render(request, "profile.html")
+
+
+@login_required
 def change_password(request):
+    form = PasswordChangeForm(user=request.user)
     if request.method == "POST":
-        password_one = request.POST.get("password1")
-        password_two = request.POST.get("password2")
-        get_password = CreateNewUser()
-        get_password.cleaned_data["password1"] = password_one
-        get_password.cleaned_data["password2"] = password_two
-        get_password.save()
+        form = PasswordChangeForm(user=request.user, data=request.POST)
+        if form.is_valid():
+            form.save()
+            update_session_auth_hash(request, form.user)
+            return redirect('logged')
 
-        messages.success(request, "Password changed")
+    context = {
+        "changepassword": form
+    }
 
-    return render(request, "reset_password.html")
+    return render(request, "reset.html", context)
 
 
 #view protected: login required
