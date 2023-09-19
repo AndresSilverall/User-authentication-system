@@ -7,17 +7,17 @@ class TestViewHome(TestCase):
     def setUp(self) -> None:
         self.client = Client()
         self.url = reverse("home")
-        self.url_register = reverse("register")
+        self.url_login = reverse("login")
         self.response = self.client.get(self.url)
-        self.response_register = self.client.get(self.url_register)
+        self.response_login = self.client.get(self.url_login)
 
 
     def test_home_view_returns_200_ok(self):
-        self.assertEquals(self.response.status_code, 200, msg="the view home have to returns a 200 status code")
+        self.assertEquals(self.response.status_code, 200, msg="the view 'home' have to returns a 200 status code.")
     
 
-    def test_view_home_returns_404_fail(self):
-        self.assertNotEquals(self.response.status_code, 404)
+    def test_view_home_fail(self):
+        self.assertNotEquals(self.response.status_code, 404, msg="the view 'home' do not returns a 404 status code.")
 
 
     def test_template_associated_to_url_pass(self):
@@ -32,6 +32,11 @@ class TestViewHome(TestCase):
     def test_context_template_register(self):
         #testing the context inside the template register.
         self.assertIn("form", self.response_register.context)
+
+
+    def test_redirect_view_home(self):
+        self.assertRedirects(self.response_login, expected_url="home/", status_code=302, 
+                             msg_prefix="the view register have to returns the user to the home page.")
 
     
         
