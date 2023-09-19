@@ -1,15 +1,52 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reset</title>
+    <link href="{% static 'icons/fontawesome/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'icons/fontawesome/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'icons/fontawesome/css/solid.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <title>Reset password</title>
 </head>
 <body>
-    <form action="{% url 'changepassword' %}" method="POST">
-        {% csrf_token %}
-        {{changepassword.as_p}}
-        <input type="submit" value="changepassword">
-    </form>
+	<div class="text-center">
+		<h1>Change password</h1>
+	</div>
+    <div class="container">
+        <form class="model-form" action="{% url 'changepassword' %}" method="POST">
+            {% csrf_token %}
+						<div class="input-group mb-2">
+							<div class="input-group-prepend">
+									<span class="input-group-text" id="basic-addon1"><label for="old_password"><i class="fa-solid fa-lock fa-lg"></i></label></span>
+							</div>
+							{{changepassword.old_password}}   
+					</div>
+            <br>
+						<div class="input-group mb-2">
+							<div class="input-group-prepend">
+									<span class="input-group-text" id="basic-addon1"><label for="new_password1"><i class="fa-solid fa-lock fa-lg"></i></label></span>
+							</div>
+							{{changepassword.new_password1}}   
+					</div>
+            <br>
+						<div class="input-group mb-2">
+							<div class="input-group-prepend">
+									<span class="input-group-text" id="basic-addon1"><label for="new_password2"><i class="fa-solid fa-lock fa-lg"></i></label></span>
+							</div>
+							{{changepassword.new_password2}}   
+					</div>
+            <br>
+            <input class="btn btn-success" type="submit" value="Change password">
+        </form>
+				{% if changepassword.errors %}
+            <div class="alert alert-danger">
+                {{changepassword.errors}}
+            </div>
+            {% endif %}
+        </div>
+    </div>
 </body>
 </html>

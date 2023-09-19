@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from Authenticate.forms import CreateNewUser, ResetPassword
+from Authenticate.forms import CreateNewUser, ChangePasswordForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -66,9 +66,10 @@ def my_profile(request):
 
 @login_required
 def change_password(request):
-    form = PasswordChangeForm(user=request.user)
+    #form = ChangePasswordForm(request.user)
+    form = ChangePasswordForm(user=request.user)
     if request.method == "POST":
-        form = PasswordChangeForm(user=request.user, data=request.POST)
+        form = ChangePasswordForm(user=request.user, data=request.POST)
         if form.is_valid():
             form.save()
             update_session_auth_hash(request, form.user)
