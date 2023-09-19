@@ -8,13 +8,9 @@ from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash #keep it the user session active
 
 
-# Create your views here.
+#home page.
 def home(request):
-    return render(request, "navbar.html")
-
-
-def logged_user(request):
-    return render(request, "user_logged.html")
+    return render(request, "home.html")
 
 
 def register_user(request):
@@ -43,7 +39,7 @@ def login_user(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect("logged")
+            return redirect("home")
         else:
             messages.error(request, "Username or password incorrect!")
         
@@ -56,7 +52,7 @@ def login_user(request):
 
 def logout_user(request):
     logout(request)
-    return render(request, "navbar.html")
+    return render(request, "home.html")
 
 
 
@@ -69,7 +65,7 @@ def change_password(request):
         if form.is_valid():
             form.save()
             update_session_auth_hash(request, form.user)
-            return redirect('logged')
+            return redirect('home')
 
     context = {
         "changepassword": form

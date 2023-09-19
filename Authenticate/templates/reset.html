@@ -43,7 +43,9 @@
                 {{ changepassword.new_password2 }}
             </div>
             <br>
-            <input class="btn btn-primary mx-5" type="submit" value="Change password">
+            <input class="btn btn-primary mx-5 mb-3" type="submit" value="Change password">
+            <br>
+            <a href="{% url 'home' %}" style="text-decoration: none;"> Back to home</a>
         </form>
         {% if changepassword.errors %}
             <div class="alert alert-danger">
