@@ -10,6 +10,14 @@ class TestingForm(TestCase):
         self.cliente = Client()
         self.url = reverse("register")
 
+        self.error_messages = {
+            
+            "username": "andressilvera12",
+            "email": "andres12@gmail.com",
+            "password1": "3144300Ua",
+            "password2": "310Ua"
+        }
+
         self.data = {
 
             "username": "andressilvera12",
@@ -46,6 +54,9 @@ class TestingForm(TestCase):
         #test with all the incorrect fields
         self.form_two = CreateNewUser(data=self.data_two)
 
+        #test errors form messages 
+        self.form_errors = CreateNewUser(data=self.error_messages)
+
 
     def test_is_valid_form(self):
         self.assertTrue(self.form.is_valid(), msg="returns True if all the fields are correct")
@@ -58,3 +69,7 @@ class TestingForm(TestCase):
     def test_form_send_data_ok(self):
         response = self.client.post(self.url, self.send)
         self.assertEquals(response.status_code, 200, msg="returns a 200 status code when the user send the data")
+
+
+    def test_form_error_messages(self):
+        self.assertEquals(self.form_errors.errors["password2"], ["The two password fields didn’t match."])
