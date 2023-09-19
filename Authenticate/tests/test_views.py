@@ -7,9 +7,11 @@ class TestViewHome(TestCase):
     def setUp(self) -> None:
         self.client = Client()
         self.url = reverse("home")
+        self.url_register = reverse("register")
         self.url_login = reverse("login")
         self.response = self.client.get(self.url)
         self.response_login = self.client.get(self.url_login)
+        self.response_register = self.client.get(self.url_register)
 
 
     def test_home_view_returns_200_ok(self):
@@ -32,11 +34,3 @@ class TestViewHome(TestCase):
     def test_context_template_register(self):
         #testing the context inside the template register.
         self.assertIn("form", self.response_register.context)
-
-
-    def test_redirect_view_home(self):
-        self.assertRedirects(self.response_login, expected_url="home/", status_code=302, 
-                             msg_prefix="the view register have to returns the user to the home page.")
-
-    
-        

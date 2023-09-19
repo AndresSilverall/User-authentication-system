@@ -6,12 +6,9 @@
 
 body {
     
-    background: #304352;
-    background: -webkit-linear-gradient(to right, #d7d2cc, #304352); 
-    background: linear-gradient(to right, #d7d2cc, #304352); 
-
-    
-    
+    background: #6441A5; 
+    background: -webkit-linear-gradient(to right, #2a0845, #6441A5);  
+    background: linear-gradient(to right, #2a0845, #6441A5);   
 }
 
 
