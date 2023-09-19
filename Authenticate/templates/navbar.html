@@ -14,17 +14,17 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-light"> 
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><span>Logo</span></a>
+            <a class="navbar-brand" href="#"><span><img src="{% static 'images/logo.png' %}" alt="logo.png" width="35" height="35"></span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-10 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="{% url 'logged' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Products</a>
+                        <a class="nav-link" href="{% url 'products' %}">Products</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Clients</a>

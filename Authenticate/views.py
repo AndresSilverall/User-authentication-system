@@ -59,10 +59,6 @@ def logout_user(request):
     return render(request, "navbar.html")
 
 
-@login_required
-def my_profile(request):
-    return render(request, "profile.html")
-
 
 @login_required
 def change_password(request):
@@ -83,5 +79,6 @@ def change_password(request):
 
 
 #view protected: login required
+@login_required(login_url="login")
 def products(request):
-    pass
+    return render(request, "products.html")
