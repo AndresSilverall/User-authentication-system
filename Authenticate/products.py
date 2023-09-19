@@ -18,8 +18,9 @@ class Products(models.Model):
         verbose_name="product name"
     )
     
-    brand = models.TextChoices(
-        PRODUCT_BRAND
+    brand = models.CharField(
+        max_length=10,
+        choices=PRODUCT_BRAND
         )
     
     description = models.TextField(

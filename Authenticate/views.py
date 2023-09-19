@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from Authenticate.products import Products
 from Authenticate.forms import CreateNewUser, ChangePasswordForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
@@ -77,4 +78,9 @@ def change_password(request):
 #view protected: login required
 @login_required(login_url="login")
 def products(request):
-    return render(request, "products.html")
+    products = Products.objects.all()
+
+    context = {
+        "products": products
+    }
+    return render(request, "products.html", context)
