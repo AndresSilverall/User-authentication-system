@@ -70,12 +70,12 @@ La aplicación cuenta con diferentes módulos como lo son los formularios, vista
 
 
 ### Login
-<img src="assets/login.gif" alt="login.png" width="730">
+<img src="assets/login.gif" alt="login.gif" width="730">
 
 
 ### Usuario o contraseña incorrectos
-<img src="assets/login_error.gif" alt="login_error.png" width="730">
+<img src="assets/login_error.gif" alt="login_error.gif" width="730">
 
 
 ### Cambiar contraseña
-<img src="assets/reset.gif" alt="reset.png" width="730">
+<img src="assets/reset.gif" alt="reset.gif" width="730">
