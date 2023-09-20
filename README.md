@@ -19,7 +19,7 @@ Aplicación web para el registro y autenticación, el cual permitirá llevar un 
 3. Ejecuta un entorno virtual de Python para la ejecución de la App
 
 
-### Instalar venv en Python
+### Instalar un entorno virtual en Python
 
 - Instalar desde el gestor de paquetes de Python: `pip install venv`
 - Crear un entorno virtual: `python -m venv venv`
@@ -40,7 +40,6 @@ La aplicación cuenta con diferentes módulos como lo son los formularios, vista
 ### Aplicacion de pruebas unitarias a cada componente (algunos ejemplos)
 
 
-
 #### Vistas
 
 - Comprobar que la vista home debe retornar un codigo de estado HTTP de tipo 200  ✓
@@ -48,7 +47,6 @@ La aplicación cuenta con diferentes módulos como lo son los formularios, vista
 - Comprobar que la vista home no debe retornar un codigo de estado HTTP de tipo 404  ✓
 
 - Comprobar que la vista home tiene asociado el template 'home.html'  ✓
-
 
 
 #### Modelos
@@ -62,15 +60,11 @@ La aplicación cuenta con diferentes módulos como lo son los formularios, vista
 - Comprobar que el precio del producto dentro del modelo de pruebas es menor a 5.000.000  ✓
 
 
-
-
 #### URLS
 
 - Comprobar que la URL 'logout' tiene asociada la función 'logout_user'  ✓
 
 - Comprobar que la URL 'home' tiene asociada la función 'home'  ✓
-
-
 
 
 #### Formularios
@@ -79,15 +73,14 @@ La aplicación cuenta con diferentes módulos como lo son los formularios, vista
 
 - Comprobar que los datos ingresados en el formulario de registro de usuario es invalido  ✓
 
-- Comprobar que cuando el usuario mande los datos en el formulario de registro, debe retornar codigo de estado HTTP de tipo  ✓
+- Comprobar que cuando el usuario mande los datos en el formulario de registro, debe retornar un codigo de estado HTTP de tipo 200 ✓
 
 
 
 Para correr los tests unitarios ejecuta el siguiente comando: `python manage.py test Authenticate -v 2`
 
 
-
-## Resultados de las pruebas
+#### Resultados de las pruebas
 
 <img src="assets/tests_success.png" alt="tests_success.png" width="680">
 
@@ -111,7 +104,7 @@ Para correr los tests unitarios ejecuta el siguiente comando: `python manage.py 
 
 
 ### Cambiar contraseña
-<img src="assets/reset_password.gif" alt="reset_password.gif" width="730">
+<img src="assets/change_password.gif" alt="change_password.gif" width="730">
 
 
 ### Error de cambio de contraseña
