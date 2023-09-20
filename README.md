@@ -56,5 +56,11 @@ La aplicación cuenta con diferentes módulos como lo son los formularios, vista
 
 ## Resultados de las pruebas
 
-<img src="assets/tests_success.png" alt="tests_success.png" width="800">
+<img src="assets/tests_success.png" alt="tests_success.png" width="680">
 
+
+## App en ejecución
+
+# Creación de usuario
+
+<img src="assets/create_user.gif" alt="create_user.png" width="700">
