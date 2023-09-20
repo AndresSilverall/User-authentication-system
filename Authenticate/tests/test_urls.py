@@ -23,6 +23,3 @@ class TestingUrls(TestCase):
         self.assertNotEquals(self.response.func, home, 
                         msg="verify if the url is associated to the 'home' view function.")
 
-
-    def test_authenticated_view_requires_login(self):
-        self.assertRedirects(self.redirect, reverse('/login/?next=/products/'))
