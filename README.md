@@ -66,7 +66,7 @@ La aplicación cuenta con diferentes módulos como lo son los formularios, vista
 
 
 ### Campos incorrectos 
-<img src="assets/create_user.gif" alt="create_user.gif" width="730">
+<img src="assets/create_user_error.gif" alt="create_user_error.gif" width="730">
 
 
 ### Login
