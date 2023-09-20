@@ -2,6 +2,7 @@
 
 Aplicación web para el registro y autenticación, el cual permitirá llevar un control del acceso a los usuarios, cuenta con un sistema para la creación de una cuenta de usuario, inicio de sesión y un restablecedor de contraseña en caso de olvidarla, para acceder a la sección de productos el usuario deberá estar logeado.
 
+
 ## Tecnologías usadas
 
 - Python versión 3.8.5
@@ -10,11 +11,13 @@ Aplicación web para el registro y autenticación, el cual permitirá llevar un 
 - CSS
 - HTML5
 
+
 ## Instalación
 
 1. Clona este repositorio: `https://github.com/AndresSilverall/User-authentication-system.git`
 2. Navega a la carpeta del proyecto: `cd User-authentication-system`
 3. Ejecuta un entorno virtual de Python para la ejecución de la App
+
 
 ### Instalar venv en Python
 
@@ -29,6 +32,7 @@ Aplicación web para el registro y autenticación, el cual permitirá llevar un 
 4. Ejecuta el servidor de desarrollo: `python manage.py runserver`
 5. Abre tu navegador y ve a: `http://127.0.0.1:8000/`
 
+
 ## Pruebas de software (Unit Testing)
 
 La aplicación cuenta con diferentes módulos como lo son los formularios, vistas, rutas (URLs), templates y modelos, para verificar el correcto funcionamiento de cada módulo por separado se aplicaron pruebas unitarias (Unit Testing), se aplicó un total de 16 de casos de pruebas, en las que se llevaron a cabo pruebas de éxito y pruebas de error.
@@ -37,7 +41,7 @@ La aplicación cuenta con diferentes módulos como lo son los formularios, vista
 
 | Columna 1 | Columna 2 | Columna 3 | Columna 4 | Columna 5 |
 |-----------|-----------|-----------|-----------|-----------|
-| Celda 1,1 | Celda 1,2 | Celda 1,3 | Celda 1,4 | Celda 1,5 |
+| Celda 1,1ehfee | Celda 1,2 | Celda 1,3 | Celda 1,4 | Celda 1,5 |
 | Celda 2,1 | Celda 2,2 | Celda 2,3 | Celda 2,4 | Celda 2,5 |
 | Celda 3,1 | Celda 3,2 | Celda 3,3 | Celda 3,4 | Celda 3,5 |
 | Celda 4,1 | Celda 4,2 | Celda 4,3 | Celda 4,4 | Celda 4,5 |
@@ -49,6 +53,7 @@ La aplicación cuenta con diferentes módulos como lo son los formularios, vista
 | Celda 10,1| Celda 10,2| Celda 10,3| Celda 10,4| Celda 10,5|
 
 
-## App en ejecución
 
-![App en ejecución](assets/app.gif)
+## Resultados de las pruebas
+
+![tests_success](assets/tests_success.png)

@@ -22,4 +22,3 @@ class TestingUrls(TestCase):
     def test_url_not_associated(self):
         self.assertNotEquals(self.response.func, home, 
                         msg="verify if the url is associated to the 'home' view function.")
-
