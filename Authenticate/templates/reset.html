@@ -47,6 +47,14 @@
             <br>
             <a href="{% url 'home' %}" style="text-decoration: none;"> Back to home</a>
         </form>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-success">
+                    {{message}}
+                </div>
+            {% endfor %}
+        {% endif %}
+
         {% if changepassword.errors %}
             <div class="alert alert-danger">
                 {{ changepassword.errors }}

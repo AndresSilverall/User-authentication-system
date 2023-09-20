@@ -65,5 +65,10 @@ La aplicación cuenta con diferentes módulos como lo son los formularios, vista
 
 <img src="assets/create_user.gif" alt="create_user.gif" width="730">
 
+
 ### Login
 <img src="assets/login.gif" alt="login.png" width="730">
+
+
+### Cambiar contraseña
+<img src="assets/reset.gif" alt="reset.png" width="730">
