@@ -62,12 +62,19 @@ La aplicación cuenta con diferentes módulos como lo son los formularios, vista
 ## App en ejecución
 
 ### Creación de usuario
+<img src="assets/create_user.gif" alt="create_user.gif" width="730">
 
+
+### Campos incorrectos 
 <img src="assets/create_user.gif" alt="create_user.gif" width="730">
 
 
 ### Login
 <img src="assets/login.gif" alt="login.png" width="730">
+
+
+### Usuario o contraseña incorrectos
+<img src="assets/login_error.gif" alt="login_error.png" width="730">
 
 
 ### Cambiar contraseña
