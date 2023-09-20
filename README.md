@@ -56,4 +56,5 @@ La aplicación cuenta con diferentes módulos como lo son los formularios, vista
 
 ## Resultados de las pruebas
 
-![tests_success](assets/tests_success.png)
+<img src="assets/tests_success.png" alt="tests_success.png" width="500">
+
