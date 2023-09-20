@@ -39,31 +39,44 @@ La aplicación cuenta con diferentes módulos como lo son los formularios, vista
 
 ### Aplicacion de pruebas unitarias a cada componente (algunos ejemplos)
 
+
 - Vistas
 
 Comprobar que la vista home debe retornar un codigo de estado HTTP de tipo 200  ✓
+
 Comprobar que la vista home no debe retornar un codigo de estado HTTP de tipo 404  ✓
+
 Comprobar que la vista home tiene asociado el template 'home.html'  ✓
+
 
 - Modelos
 
 Comprobar que el objeto 'product_one' es una instancia del modelo 'Products'  ✓
+
 Comprobar que el modelo con la columna 'name' cuenta con una tupla  ✓
+
 Comprobar que el  nombre del producto dentro del modelo de pruebas cuenta con un nombre igual a 'Iphone 14'  ✓
+
 Comprobar que el precio del producto dentro del modelo de pruebas es menor a 5.000.000  ✓
+
 
 
 - URLS
 
 Comprobar que la URL 'logout' tiene asociada la función 'logout_user'  ✓
+
 Comprobar que la URL 'home' tiene asociada la función 'home'  ✓
+
 
 
 - Formularios
 
 Comprobar que los datos ingresados en el formulario de registro de usuario es valido  ✓
+
 Comprobar que los datos ingresados en el formulario de registro de usuario es invalido  ✓
+
 Comprobar que cuando el usuario mande los datos en el formulario de registro, debe retornar codigo de estado HTTP de tipo  ✓
+
 
 
 Para correr los tests unitarios ejecuta el siguiente comando: `python manage.py test Authenticate -v 2`
