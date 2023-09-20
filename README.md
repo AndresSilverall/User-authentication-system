@@ -61,6 +61,9 @@ La aplicación cuenta con diferentes módulos como lo son los formularios, vista
 
 ## App en ejecución
 
-# Creación de usuario
+### Creación de usuario
 
-<img src="assets/create_user.gif" alt="create_user.png" width="700">
+<img src="assets/create_user.gif" alt="create_user.gif" width="730">
+
+### Login
+<img src="assets/login.gif" alt="login.png" width="730">
