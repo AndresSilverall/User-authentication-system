@@ -10,6 +10,8 @@ Aplicación web para el registro y autenticación, el cual permitirá llevar un 
 - Bootstrap versión 5.3
 - CSS
 - HTML5
+- IDE (Visual studio code)
+- GIT versión 2.37.2.windows.2
 
 
 ## Instalación
@@ -69,11 +71,11 @@ La aplicación cuenta con diferentes módulos como lo son los formularios, vista
 
 #### Formularios
 
-- Comprobar que los datos ingresados en el formulario de registro de usuario es valido  ✓
+- Comprobar que los datos ingresados en el formulario de registro de usuario son validos  ✓
 
-- Comprobar que los datos ingresados en el formulario de registro de usuario es invalido  ✓
+- Comprobar que los datos ingresados en el formulario de registro de usuario son invalidos  ✓
 
-- Comprobar que cuando el usuario mande los datos en el formulario de registro, debe retornar un codigo de estado HTTP de tipo 200 ✓
+- Comprobar cuando el usuario envie los datos en el formulario de registro este debe retornar un codigo de estado HTTP de tipo 200 ✓
 
 
 
